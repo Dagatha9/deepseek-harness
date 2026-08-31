@@ -14,4 +14,6 @@
 
 Trang được phát hành dưới dạng Claude Artifact với capability `artifact`: mỗi lần tích tiêm, trang tái tạo toàn bộ tài liệu (từ nguồn chuẩn trong JS, không serialize DOM) với khối state JSON mới rồi `artifact.publish()` — dữ liệu lưu trên máy chủ, đồng bộ giữa các thiết bị cùng mở link. Khi mở ngoài môi trường artifact, trang tự chuyển sang lưu `localStorage` trên thiết bị và hiện banner báo.
 
-`index.html` là toàn bộ ứng dụng: không build, không dependency ngoài Google Fonts (Baloo 2 + Be Vietnam Pro, có fallback hệ thống).
+`index.html` là toàn bộ ứng dụng: không build, không dependency ngoài Google Fonts (Baloo 2 + Be Vietnam Pro, có fallback hệ thống). File này là bản HTML đầy đủ (`<!doctype>` + `<meta viewport>`) để chạy độc lập qua GitHub Pages/trình duyệt bất kỳ — khác với bản dùng cho Claude Artifact vốn chỉ là đoạn nội dung được khung Artifact tự bọc thêm phần `<head>`.
+
+Bản chạy trực tiếp qua GitHub Pages: nhánh `gh-pages` (root) → https://dagatha9.github.io/deepseek-harness/
